@@ -10,7 +10,8 @@ Textos: Nunito
   --vermelho-tampinha:   #ED2224;
   --vermelho-tampinha-op: rgba(255, 51, 51, 0.8);
   --verde-tampinha:      #52D726;
-  --verde-tampinha-alt:  #00B050;
+  --verde-tampinha-alt:  #026830;
+  --verde-tampinha-op:  rgba(2, 104, 48, 0.521);
   --preto-texto:         #111111;
   --branco:              #FFFFFF;
   --amarelo-claro:       #FFE156;
@@ -262,7 +263,7 @@ nav ul li a:hover {
     top: 142px;
     left: 0;
     width: 100vw;
-    background: var(--amarelo-claro-op);
+    background: var(--amarelo-claro);
     padding: 0;
     margin: 0;
     flex-direction: column;
@@ -288,5 +289,91 @@ nav ul li a:hover {
 
   .btn-fale {
     background-color: var(--branco);
+  }
+}
+
+/* MAIN - INTRODUÇÃO */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#introducao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 60vh;
+  background: var(--branco);
+}
+
+#introducao::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/assets/image/mapa.png") center center/80% no-repeat;
+  background-attachment: fixed;
+  opacity: 0.14;
+  z-index: 0;
+  filter: sepia(1) hue-rotate(60deg) brightness(1.5) saturate(2);
+}
+
+div.conteudo {
+  width: 70%;
+}
+
+#introducao h3 {
+  font-size: var(--font-xxl);
+  color: var(--verde-tampinha-alt);
+  font-style: italic;
+  text-align: center;
+  position: relative;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: 140px;
+  background: #222;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 0.5rem;
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  bottom: 125%; /* Acima do elemento */
+  transform: translateX(-50%);
+  transition: opacity 0.3s;
+  pointer-events: none;
+  font-size: 1.2rem;
+}
+
+.conteudo h3 span:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.enfase {
+  text-transform: uppercase;
+  color: var(--vermelho-tampinha-op);
+  font-weight: 900;
+}
+
+.enfase-alvo {
+  text-transform: uppercase;
+  color: var(--vermelho-tampinha);
+  font-weight: 900;
+}
+
+/* MAIN - INTRODUÇÃO MOBILE */
+@media (max-width: 425px) {
+  #introducao::before {
+    background: url("/assets/image/mapa.png") center center/150% no-repeat;
   }
 }
