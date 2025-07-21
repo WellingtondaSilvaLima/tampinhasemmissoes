@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/index.css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Baloo+2:700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="shortcut icon" href="assets/icon/tampinhas.ico" type="image/x-icon">
 
   <title>Tampinhas em Missões</title>
@@ -21,32 +22,43 @@
 
         <div id="texto-top-cta">
           <div id="seja-embaixador">
-            <i></i>
-            <span>Seja um embaixador</span>
+            <i id="ico-embaixador" class="fas fa-hand-holding-heart"></i>
+            <a href="#" target="">Seja um embaixador</a>
           </div>
 
           <div id="faca-doacao">
-            <i></i>
-            <span>Faça uma doação</span>
+            <i id="ico-doacao" class="fas fa-donate"></i>
+            <a href="#" target="">Faça uma doação</a>
           </div>
         </div>
       </div>
     </div>  <!-- Fim top bar -->
 
     <nav>
-      <div id="logo"></div>
-      <ul>
-        <li>Quem somos</li>
-        <li>Transparência</li>
-        <li>Igrejas parceiras</li>
-        <li>Embaixadores</li>
-        <li>Fale conosco</li>
+      <div id="logo">
+        <img src="assets/image/logo_semfundo_128x128.png" alt="Logo do Projeto Tampinhas em Missões">
+      </div>
+
+      <ul id="nav-list">
+        <li><a href="#">Quem somos</a></li>
+        <li><a href="#">Transparência</a></li>
+        <li><a href="#">Igrejas parceiras</a></li>
+        <li><a href="#">Embaixadores</a></li>
+        <li><a href="#">Fale conosco</a></li>
       </ul>
+
+      <div class="menu-hamburger" id="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>  <!-- Fim nav bar -->
   </header>
 
   <main></main>
 
   <footer></footer>
+
+  <script src="assets/js/index.js"></script>
 </body>
 </html>

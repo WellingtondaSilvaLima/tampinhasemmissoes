@@ -8,12 +8,13 @@ Textos: Nunito
 :root {
   /* Cores principais do projeto */
   --vermelho-tampinha:   #ED2224;
-  --vermelho-tampinha-alt: #FF3333;
+  --vermelho-tampinha-op: rgba(255, 51, 51, 0.8);
   --verde-tampinha:      #52D726;
   --verde-tampinha-alt:  #00B050;
   --preto-texto:         #111111;
   --branco:              #FFFFFF;
   --amarelo-claro:       #FFE156;
+  --amarelo-claro-op:       rgba(255, 224, 86, 0.4);
   --cinza-claro:         #F7F7F7;
 
   /* Cores auxiliares */
@@ -57,19 +58,25 @@ html {
   font-family: var(--font-texto);
 }
 
+header {
+  background-color: var(--branco);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.12);
+  width: 100%;
+}
+
 /* HEADER - TOP */
 #top-bar {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--amarelo-claro);
+  background-color: var(--amarelo-claro-op);
 }
 
 hr {
   width: 100%;
   height: var(--space-xs);
-  background-color: var(--vermelho-tampinha);
+  background-color: var(--amarelo-claro);
   margin-bottom: var(--space-xs);
 }
 
@@ -93,4 +100,157 @@ hr {
   font-family: var(--font-titulo);
   text-transform: uppercase;
   font-size: var(--font-md);
+}
+
+#texto-top-cta {
+  display: flex;
+}
+
+#ico-embaixador,
+#ico-doacao {
+  font-size: 1.3rem;
+  color: var(--vermelho-tampinha);
+  margin-right: var(--space-xxs);
+}
+
+#texto-top-cta a:link,
+#texto-top-cta a:visited {
+  text-decoration: none;
+  font-size: var(--font-sm);
+  margin-right: var(--space-xs);
+  color: var(--preto-texto);
+  padding: var(--space-xs);
+  border: 1px solid none;
+  border-radius: 1.2rem;
+  transition: all 0.6s ease-in-out;
+}
+
+#texto-top-cta a:hover,
+#texto-top-cta a:active {
+  color: var(--branco);
+  background-color: var(--vermelho-tampinha);
+}
+
+/* HEADER - NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 1rem auto;
+}
+
+#menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  z-index: 1001;
+  margin-right: var(--space-xl);
+}
+
+#menu-btn span {
+  display: block;
+  height: 4px;
+  margin: 4px 0;
+  background: var(--preto-texto);
+  border-radius: 2px;
+  transition: 0.4s;
+}
+
+/* Animação do ícone hambúrguer ao abrir */
+#menu-btn.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+#menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+#menu-btn.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  width: 70vw;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+  font-size: var(--font-md);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--preto-texto);
+  padding: var(--space-sm);
+  border: 1px solid none;
+  border-radius: 1.2rem;
+  transition: all 0.6s ease-in-out;
+}
+
+nav ul li a:active,
+nav ul li a:hover {
+  background-color: var(--amarelo-claro);
+}
+
+/* HEADER - MOBILE */
+@media (min-width: 768px) and (max-width: 1020px) {
+  nav ul li a:link,
+  nav ul li a:visited {
+    font-size: var(--font-xs);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--preto-texto);
+    padding: var(--space-sm);
+    border: 1px solid none;
+    border-radius: 1.2rem;
+    transition: all 0.6s ease-in-out;
+  }
+
+  nav ul li a:active,
+  nav ul li a:hover {
+    background-color: var(--amarelo-claro);
+  }
+}
+
+@media (max-width: 425px) {
+  #top-bar {
+    display: none;
+  }
+
+  #nav-list {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(.77,0,.18,1), opacity 0.35s;
+    position: absolute;
+    top: 142px;
+    left: 0;
+    width: 100vw;
+    background: var(--amarelo-claro-op);
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    gap: var(--space-xs);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    z-index: 1000;
+    display: flex;
+  }
+
+  #menu-btn {
+    display: flex;
+  }
+
+  #nav-list.open {
+    max-height: 400px;
+    opacity: 1;
+    padding: var(--space-sm) 0;
+  }
+
+  #nav-list.open li {
+    font-size: var(--font-lg);
+  }
 }
