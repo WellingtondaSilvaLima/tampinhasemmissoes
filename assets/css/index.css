@@ -196,6 +196,38 @@ nav ul li a:hover {
   background-color: var(--amarelo-claro);
 }
 
+.btn-fale {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem; /* Espaço entre ícone e texto */
+  background: var(--amarelo-claro);
+  color: #fff;
+  font-family: var(--font-titulo, 'Baloo 2', Arial, sans-serif);
+  font-size: var(--font-md, 1.4rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0 2.8rem 2.8rem 2.8rem !important;
+  padding: 1.2rem 2.4rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.12);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.btn-fale:hover, .btn-fale:focus {
+  background: var(--amarelo-claro-op);
+  box-shadow: 0 4px 16px 0 rgba(255, 251, 24, 0.16);
+  outline: none;
+}
+
+.btn-fale i, .btn-fale svg {
+  font-size: 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 /* HEADER - MOBILE */
 @media (min-width: 768px) and (max-width: 1020px) {
   nav ul li a:link,
@@ -252,5 +284,9 @@ nav ul li a:hover {
 
   #nav-list.open li {
     font-size: var(--font-lg);
+  }
+
+  .btn-fale {
+    background-color: var(--branco);
   }
 }
