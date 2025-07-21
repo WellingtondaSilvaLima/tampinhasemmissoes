@@ -1,0 +1,96 @@
+/* 
+Títulos: Baloo 2
+Textos: Nunito
+
+
+*/
+
+:root {
+  /* Cores principais do projeto */
+  --vermelho-tampinha:   #ED2224;
+  --vermelho-tampinha-alt: #FF3333;
+  --verde-tampinha:      #52D726;
+  --verde-tampinha-alt:  #00B050;
+  --preto-texto:         #111111;
+  --branco:              #FFFFFF;
+  --amarelo-claro:       #FFE156;
+  --cinza-claro:         #F7F7F7;
+
+  /* Cores auxiliares */
+  --preto:               #111111;
+  --cinza-texto:         #444444;
+  --cinza-bg:            #E0E0E0;
+
+  /* Fontes */
+  --font-titulo: 'Baloo 2', Arial, sans-serif;
+  --font-texto:  'Nunito', Arial, sans-serif;
+
+  /* Tamanhos das Fontes */
+  --font-xxs: 0.9rem;   /* 9px */
+  --font-xs:  1.0rem;   /* 10px */
+  --font-sm:  1.2rem;   /* 12px */
+  --font-md:  1.4rem;   /* 14px */
+  --font-lg:  1.6rem;   /* 16px */
+  --font-xl:  2.0rem;   /* 20px */
+  --font-xxl: 2.4rem;   /* 24px */
+  --font-xxxl: 3.2rem;  /* 32px */
+  --font-giant: 4.0rem; /* 40px */
+
+  /* Espaçamentos */
+  --space-xxs: 0.4rem;  /* 4px */
+  --space-xs:  0.8rem;  /* 8px */
+  --space-sm:  1.2rem;  /* 12px */
+  --space-md:  1.6rem;  /* 16px */
+  --space-lg:  2.4rem;  /* 24px */
+  --space-xl:  3.2rem;  /* 32px */
+  --space-xxl: 4.0rem;  /* 40px */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--font-texto);
+}
+
+/* HEADER - TOP */
+#top-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--amarelo-claro);
+}
+
+hr {
+  width: 100%;
+  height: var(--space-xs);
+  background-color: var(--vermelho-tampinha);
+  margin-bottom: var(--space-xs);
+}
+
+#top-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: var(--space-lg);
+  margin-bottom: var(--space-xs);
+}
+
+#cta-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+#cta-logo span {
+  font-family: var(--font-titulo);
+  text-transform: uppercase;
+  font-size: var(--font-md);
+}
