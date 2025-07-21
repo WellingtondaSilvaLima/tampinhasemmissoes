@@ -371,6 +371,19 @@ div.conteudo {
   font-weight: 900;
 }
 
+.fade-in-on-load {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: fadeInMove 0.8s cubic-bezier(.57,.21,.69,1.25) 0.2s forwards;
+}
+
+@keyframes fadeInMove {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* MAIN - INTRODUÇÃO MOBILE */
 @media (max-width: 425px) {
   #introducao::before {
