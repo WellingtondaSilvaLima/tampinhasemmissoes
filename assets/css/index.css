@@ -316,7 +316,7 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("assets/image/mapa.png") center center/80% no-repeat;
+  background: url("../image/mapa.png") center center/80% no-repeat;
   background-attachment: fixed;
   opacity: 0.14;
   z-index: 0;
@@ -387,6 +387,6 @@ div.conteudo {
 /* MAIN - INTRODUÇÃO MOBILE */
 @media (max-width: 425px) {
   #introducao::before {
-    background: url("assets/image/mapa.png") center center/150% no-repeat;
+    background: url("../image/mapa.png") center center/150% no-repeat;
   }
 }
