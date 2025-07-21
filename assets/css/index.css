@@ -390,3 +390,18 @@ div.conteudo {
     background: url("../image/mapa.png") center center/150% no-repeat;
   }
 }
+
+/* MAIN - OBJETIVO */
+#objetivo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#objetivo.conteudo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
