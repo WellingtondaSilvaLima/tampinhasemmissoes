@@ -197,7 +197,7 @@ nav ul li a:hover {
   background-color: var(--amarelo-claro);
 }
 
-.btn-fale {
+.btn {
   display: inline-flex;
   align-items: center;
   gap: 0.8rem; /* Espaço entre ícone e texto */
@@ -213,15 +213,17 @@ nav ul li a:hover {
   cursor: pointer;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.12);
   transition: background 0.2s, box-shadow 0.2s;
+  color: var(--preto);
+  text-decoration: none;
 }
 
-.btn-fale:hover, .btn-fale:focus {
+.btn:hover, .btn:focus {
   background: var(--amarelo-claro-op);
   box-shadow: 0 4px 16px 0 rgba(255, 251, 24, 0.16);
   outline: none;
 }
 
-.btn-fale i, .btn-fale svg {
+.btn i, .btn svg {
   font-size: 1.6rem;
   display: inline-flex;
   align-items: center;
@@ -287,7 +289,7 @@ nav ul li a:hover {
     font-size: var(--font-lg);
   }
 
-  .btn-fale {
+  .btn {
     background-color: var(--branco);
   }
 }
@@ -317,7 +319,6 @@ main {
   position: absolute;
   inset: 0;
   background: url("../image/mapa.png") center center/80% no-repeat;
-  background-attachment: fixed;
   opacity: 0.14;
   z-index: 0;
   filter: sepia(1) hue-rotate(60deg) brightness(1.5) saturate(2);
@@ -327,12 +328,13 @@ div.conteudo {
   width: 70%;
 }
 
-#introducao h3 {
+#introducao p {
   font-size: var(--font-xxl);
   color: var(--verde-tampinha-alt);
   font-style: italic;
   text-align: center;
   position: relative;
+  font-weight: 600;
 }
 
 .tooltip-text {
@@ -354,7 +356,7 @@ div.conteudo {
   font-size: 1.2rem;
 }
 
-.conteudo h3 span:hover .tooltip-text {
+.conteudo p span:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
 }
@@ -399,9 +401,37 @@ div.conteudo {
   width: 100%;
 }
 
-#objetivo.conteudo {
+.conteudo {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 70%;
+  gap: 3.2rem;
+  margin: 4rem 0;
+}
+
+#img-objetivo {
+  width: 50%;
+}
+
+#img-objetivo img {
+  width: 100%;
+}
+
+#texto-objetivo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-md);
+  width: 50%;
+}
+
+#texto-objetivo h2 {
+  font-size: var(--font-xxxl);
+  font-family: var(--font-titulo);
+  color: var(--verde-tampinha-alt);
+}
+
+#texto-objetivo p {
+  font-size: var(--font-lg);
 }
