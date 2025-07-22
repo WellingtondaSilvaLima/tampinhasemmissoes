@@ -482,3 +482,125 @@ div.conteudo {
     justify-content: center;
   }
 }
+
+/* MAIN - PORQUE JUNTAR TAMPINHA */
+#por-que-juntar-tampinhas {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#conteudo-pqjt {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#faixa-pqjt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 0 var(--space-lg) 0 var(--space-lg);
+  margin: var(--space-md) 0;
+  height: 25vh;
+  position: relative;
+  overflow: hidden;
+  background-image: url(../image/fundo-top-pqjt.png);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 6px 24px 0 rgba(34,34,34,0.11), 0 1.5px 6px 0 rgba(34,34,34,0.07);
+}
+
+#faixa-pqjt h2 {
+  font-size: var(--font-giant);
+  font-family: var(--font-titulo);
+  color: var(--verde-tampinha-alt);
+  position: relative;
+  z-index: 2; /* Fica acima do overlay */
+}
+
+.fade-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s, transform 0.7s;
+}
+.fade-on-scroll.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: var(--space-lg);
+  width: 41rem;
+  height: 53rem;
+  border-radius: 0 var(--space-lg) 0 var(--space-lg);
+  box-shadow: 0 6px 24px 0 rgba(34,34,34,0.11), 0 1.5px 6px 0 rgba(34,34,34,0.07);
+  transition: all 0.7s ease-in-out;
+}
+
+.card:hover {
+  scale: 1.03;
+  box-shadow: 0 6px 24px 0 var(--amarelo-claro-op), 0 1.5px 6px 0 var(--amarelo-claro-op);
+}
+
+#cards-pqjt {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: var(--space-md) 0;
+}
+
+#cards-pqjt h3 {
+  margin: var(--space-lg) 0;
+  font-size: var(--font-xl);
+  font-family: var(--font-titulo);
+  text-transform: uppercase;
+  color: var(--verde-tampinha-alt);
+}
+
+#cards-pqjt p {
+  font-size: var(--font-md);
+  margin: var(--space-sm);
+}
+
+/* MAIN - PORQUE JUNTAR TAMPINHA MOBILE */
+@media (max-width: 425px) {
+  #faixa-pqjt {
+    height: 13vh;
+  }
+
+  #faixa-pqjt h2 {
+    font-size: var(--font-xl);
+  }
+
+  #cards-pqjt {
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .card {
+    width: 35rem;
+    height: 48rem;
+  }
+
+  #cards-pqjt h3 {
+    font-size: var(--font-lg);
+  }
+
+  #cards-pqjt p {
+    font-size: var(--font-sm);
+  }
+
+  #conteudo-pqjt {
+    width: 90%;
+  }
+}
