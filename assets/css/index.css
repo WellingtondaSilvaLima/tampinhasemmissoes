@@ -539,18 +539,24 @@ div.conteudo {
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  padding: var(--space-lg);
+  padding: 0; /* Mudei para 0 pois vamos colocar padding individual */
   width: 41rem;
-  height: 73rem;
+  min-height: 60rem; /* Mudei height para min-height */
   border-radius: 0 var(--space-lg) 0 var(--space-lg);
   box-shadow: 0 6px 24px 0 rgba(34,34,34,0.11), 0 1.5px 6px 0 rgba(34,34,34,0.07);
   transition: all 0.7s ease-in-out;
   overflow: hidden;
+  background: white; /* Adicionei fundo branco */
 }
 
 .card:hover {
   scale: 1.03;
   box-shadow: 0 6px 24px 0 var(--amarelo-claro-op), 0 1.5px 6px 0 var(--amarelo-claro-op);
+}
+
+.card-content {
+  padding: var(--space-lg);
+  width: 100%;
 }
 
 #cards-pqjt {
@@ -562,7 +568,6 @@ div.conteudo {
 }
 
 #cards-pqjt h3 {
-  position: absolute;
   top: 140px;
   margin: var(--space-lg) 0;
   font-size: var(--font-xl);
@@ -572,35 +577,20 @@ div.conteudo {
 }
 
 #cards-pqjt p {
-  position: absolute;
   font-size: var(--font-md);
   margin: var(--space-sm);
 }
 
-#cards-pqjt p:first-of-type {
-  top: 200px;
-}
-
-#cards-pqjt p:last-child {
-  top: 280px;
-}
-
 .img-cards-pqjt {
-  position: absolute;
-  top: 0;
   width: 100%;
   height: 15rem;
   overflow: hidden;
-  border-top-left-radius: 0;
-  border-top-right-radius: var(--space-lg);
 }
 
 .img-cards-pqjt img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-top-left-radius: 0;
-  border-top-right-radius: var(--space-lg);
   display: block;
 }
 
@@ -636,4 +626,176 @@ div.conteudo {
   #conteudo-pqjt {
     width: 90%;
   }
+}
+
+#nossos-numeros {
+  width: 100%;
+  height: 45rem;
+  margin: var(--space-sm) 0;
+}
+
+#titulo-nossos-numeros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#titulo-nossos-numeros h3 {
+  font-family: var(--font-titulo);
+  font-size: var(--font-giant);
+  color: var(--verde-tampinha-alt);
+}
+
+.conteudo-nossos-numeros {
+  width: 90%;
+  margin: var(--space-xl) auto;
+}
+
+#numeros-cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: var(--space-xl) auto;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: var(--space-xl);
+}
+
+.numeros-cards {
+  background-color: white;
+  box-shadow: 0 0 8px rgba(3, 3, 3, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  width: 35rem;
+  height: 13rem;
+  border-radius: 0 40px;
+  transition: all 0.4s ease-in-out;
+  padding: 16px;
+}
+
+.numeros-cards:hover {
+  box-shadow: 0 0 24px rgba(3, 3, 3, 0.3);
+  transform: scale(1.1);
+}
+
+.numeros-cards:hover .titulo-numeros-cards {
+  color: rgba(255, 51, 51, 0.8);
+}
+
+.numeros-cards img {
+  filter: 
+    brightness(0.5)
+    sepia(1)
+    hue-rotate(40deg)
+    saturate(8)
+    opacity(0.7)
+    drop-shadow(0 0 0 rgb(1, 253, 115));
+  width: 64px;
+}
+
+.titulo-numeros-cards {
+  font-family: var(--font-titulo);
+  font-size: var(--font-lg);
+}
+
+.numeros-cards p {
+  font-size: var(--font-sm);
+  margin-top: var(--space-xxs);
+}
+
+footer {
+  width: 100%;
+  height: 30rem;
+}
+
+#footer {
+  width: 90%;
+  height: 100%;
+  margin: var(--space-md) auto;
+}
+
+.linha-footer {
+  width: 100%;
+  height: 1px;
+  border: none;
+  background-color: #ccc;
+  opacity: 0.6;
+  margin-top: 16px;
+}
+
+#content-footer {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: var(--space-sm) auto;
+}
+
+.conteudo-footer {
+  width: 20%;
+  margin: 0 var(--space-md);
+}
+
+.conteudo-footer p {
+  font-size: var(--font-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.conteudo-footer h3 {
+  font-family: var(--font-titulo);
+  font-size: var(--font-lg);
+  color: var(--verde-tampinha-alt);
+}
+
+.conteudo-footer ul {
+  list-style: none;
+}
+
+.conteudo-footer ul li {
+  margin-top: var(--space-sm);
+}
+
+.conteudo-footer ul li a:link,
+.conteudo-footer ul li a:visited {
+  text-decoration: none;
+  color: #000;
+  font-size: var(--font-sm);
+  opacity: 0.6;
+  transition: all 0.3s ease-in-out;
+}
+
+.conteudo-footer ul li a:hover,
+.conteudo-footer ul li a:active {
+  color: var(--vermelho-tampinha);
+}
+
+.img-redes {
+  opacity: 0.6;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  margin-left: 16px;
+}
+
+.img-redes:hover {
+  filter: 
+    brightness(0.5)
+    sepia(1)
+    hue-rotate(40deg)
+    saturate(8)
+    opacity(0.7)
+    drop-shadow(0 0 0 rgba(255, 51, 51, 0.8));
+}
+
+#copy {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+#copy p {
+  font-size: var(--font-md);
+  opacity: 0.6;
 }
